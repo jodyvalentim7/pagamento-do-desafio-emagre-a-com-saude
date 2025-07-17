@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Meu Checkout</title>
+  <style>
+    /* Torna imagens e vídeos responsivos */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Layout fluido com paddings que funcionam em todos os ecrãs */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Garante que todos os elementos respeitem limites do contêiner */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Exemplo de grid responsivo (3 colunas que viram 1 no mobile) */
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.flex-grid > div {
+  flex: 1 1 300px;
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 768px) {
+  .flex-grid {
+    flex-direction: column;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-color: #fff;
+    
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .topo, .base {
+      padding: 10px;
+      background-color: #fff;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .iframe-container {
+      height: 120vh; /* ocupa 65% da altura da tela */
+      overflow: hidden;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topo">
+    <img src="img/uma.png" alt="Imagem de Cima" />
+  </div>
+
+  <div class="iframe-container">
+    <iframe src="https://pay.kuenha.com/c686005a-2fa8-4862-9442-7d5895a5f4b7" scrolling="no"></iframe>
+  </div>
+
+</body>
+</html>
